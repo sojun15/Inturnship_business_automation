@@ -1,3 +1,5 @@
 Hello,Git!
 
 Future added
+
+After creating a folder then clone my github repository into my new folder which name is my-project-copy and come back my original project.After push it, then pull it my clone repository.
