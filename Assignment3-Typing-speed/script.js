@@ -15,7 +15,7 @@ let paragraphWords = paragraphText.split(/[ ,.]+/).filter(word => word.length > 
 start_button.addEventListener("click", () => {
     user_input.disabled = false;
     user_input.value = "";
-    let seconds = 10;
+    let seconds = 30;
     user_input.focus();
 
     let timerInterval = setInterval(() => {
@@ -43,7 +43,7 @@ start_button.addEventListener("click", () => {
             output.textContent = "You didn't type anything!";  
         }
         else{
-            count.textContent = `You typed ${correctWord} correct words out of ${words.length}.`;
+            count.textContent = `You typed ${correctWord} correct words out of ${words.length}`;
             output.textContent = `Accurency: ${((correctWord / words.length) * 100).toFixed(2)}%`;
         }
     }

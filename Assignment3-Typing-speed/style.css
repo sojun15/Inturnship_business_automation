@@ -1,0 +1,44 @@
+#paragraph{
+    color: rgb(220, 211, 211);
+    background-color: black;
+}
+
+body{
+    background-color: gray;
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 25rem;
+    background-color: rgb(14, 16, 182);
+    color:white;
+}
+
+textarea{
+    width: 24rem;
+    height: 15rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    background-color: rgb(40, 199, 54);
+}
+
+.common{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+#startButton{
+    width: 10rem;
+    height: 2rem;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
