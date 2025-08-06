@@ -1,3 +1,26 @@
+## Database assignment questions
+1. Database Creation:
+-Create a database named student_management.
+
+2. Table Creation:
+-Create the following tables with appropriate data types and constraints:
+--students: student_id (PK), name, email, phone
+--courses: course_id (PK), course_name, credits
+--enrollments: enrollment_id (PK), student_id (FK), course_id (FK), enroll_date
+
+3. Insert Data:
+-Insert at least 5 students and 3 courses.
+-Enroll at least 2 students in multiple courses using the enrollments table.
+
+4. Queries:
+-Display all students and their enrolled courses.
+-Find students who are not enrolled in any course.
+-Update a student’s phone number.
+-Delete one enrollment record.
+
+
+## Answer starts here
+
 ## Create database
 CREATE DATABASE student_management;
 

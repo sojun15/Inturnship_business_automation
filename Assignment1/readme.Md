@@ -1,0 +1,1 @@
+## Create the following web page using HTML, CSS, and Tailwind to practice layout, styling, and responsiveness.
