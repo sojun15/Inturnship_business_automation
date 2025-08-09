@@ -12,8 +12,12 @@ require_once 'classes/Student.php';
 
 SessionManager:: requireLogin();
 
+// catch user login user id
+$id = $_GET['id'];
+
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $data = [
+        "id" => $id,
         "name" => $_POST['name'],
         'age' => $_POST['age'],
         'email' => $_POST['email'],
@@ -22,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     ];
 
     $student = new Student();
-    $student -> add($data);
+    $student -> addStudent($data);
     header('Location: viewStudent.php');
     exit();
 }

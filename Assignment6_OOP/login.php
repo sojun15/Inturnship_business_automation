@@ -19,6 +19,7 @@
     $user = new User();
     if ($user->Authentication($userid, $password)) {
         SessionManager::login();
+        $_SESSION['user_id'] = $userid;
         header('Location: dashboard.php');
         exit();
     } else {
