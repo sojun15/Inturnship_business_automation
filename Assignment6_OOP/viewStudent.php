@@ -18,18 +18,13 @@ $students = $students->getAll();
 <table border="1">
     <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
         <th>Course_id</th>
         <th>Course_name</th>
+        <th>Modify Information</th>
     </tr>
     <?php foreach($students as $student): ?>
         <tr>
             <td><?=$student['id']?></td>
-            <td><?=$student['name']?></td>
-            <td><?=$student['age']?></td>
-            <td><?=$student['email']?></td>
             <td><?=$student['course_id']?></td>
             <td><?=$student['course_name']?></td>
             <td>

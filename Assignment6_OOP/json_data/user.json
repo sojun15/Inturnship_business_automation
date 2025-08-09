@@ -1,14 +1,23 @@
 [
     {
         "userid": "2115",
+        "name": "sojun chandra",
+        "age": "24",
+        "email": "210215@ku.ac.bd",
         "password": "123"
     },
     {
         "userid": "2116",
+        "name": "tasbi hasan",
+        "age": "24",
+        "email": "210216@ku.ac.bd",
         "password": "456"
     },
     {
         "userid": "2117",
+        "name": "sourov chandra",
+        "age": "24",
+        "email": "210217@ku.ac.bd",
         "password": "789"
     }
 ]

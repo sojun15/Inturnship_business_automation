@@ -8,23 +8,37 @@
 <body>
     <?php
     class Student{
-        public $variable = __DIR__.'/../json_data/students.json';
+        public $studentsFile = __DIR__.'/../json_data/students.json';
+        public $usersFile = __DIR__.'/../json_data/user.json';
 
         public function getAll(){
-            return json_decode(file_get_contents($this->variable),true); 
+            return json_decode(file_get_contents($this->studentsFile),true); 
+        }
+
+        public function getUser(){
+            return json_decode(file_get_contents($this->usersFile),true); 
         }
 
         public function addStudent($data){
             $students = $this-> getAll();
             $students[] = $data;
-            file_put_contents($this-> variable,json_encode($students,JSON_PRETTY_PRINT));
+            file_put_contents($this-> studentsFile,json_encode($students,JSON_PRETTY_PRINT));
+        }
+
+        public function signupStudent($data){
+            $students = $this-> getUser();
+            $students[] = $data;
+            file_put_contents($this-> usersFile,json_encode($students,JSON_PRETTY_PRINT));
         }
 
         public function findById($id) {
+            $courses = [];
             foreach ($this->getAll() as $student) {
-                if ($student['id'] == $id) return $student;
+                if ($student['id'] == $id){
+                    $courses[] = $student; 
+                }
             }
-            return null;
+            return $courses;
         }
 
         public function update($id, $newData) {

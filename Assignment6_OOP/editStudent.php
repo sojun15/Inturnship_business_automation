@@ -15,19 +15,16 @@ SessionManager::requireLogin();
 $id = $_GET['id'];
 
 $student = new Student();
-$existing = $student->findById($id);
+$existingCourses = $student->findById($id);
 
-if (!$id) {
-    echo "Student not found.";
+if (!$existingCourses) {
+    echo "No courses found for this student.";
     exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
         'id' => $id,
-        'name' => $_POST['name'],
-        'age' => $_POST['age'],
-        'email' => $_POST['email'],
         'course_id' => $_POST['course_id'],
         'course_name' => $_POST['course_name']
     ];
@@ -38,13 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <h2>Edit Student</h2>
 <form method="post">
-    <label>ID: <input disabled type="number" name="id" value="<?= $existing['id'] ?>"></label><br>
-    <label>Name: <input type="text" name="name" value="<?= $existing['name'] ?>"></label><br>
-    <label>Age: <input type="number" name="age" value="<?= $existing['age'] ?>"></label><br>
-    <label>Email: <input type="email" name="email" value="<?= $existing['email'] ?>"></label><br>
-    <label>Course ID: <input type="text" name="course_id" value="<?= $existing['course_id'] ?>"></label><br>
-    <label>Course: <input type="text" name="course_name" value="<?= $existing['course_name'] ?>"></label><br>
+    <?php foreach($existingCourses as $course): ?>
+    <label>ID: <input disabled type="number" name="id" value="<?= $course['id'] ?>"></label><br>
+    <label>Course ID: <input type="text" name="course_id" value="<?= $course['course_id'] ?>"></label><br>
+    <label>Course Name: <input type="text" name="course_name" value="<?= $course['course_name'] ?>"></label><br>
     <button type="submit">Update</button>
+    <?php endforeach; ?>
 </form>
 </body>
 </html>

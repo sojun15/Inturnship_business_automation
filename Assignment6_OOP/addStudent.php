@@ -18,9 +18,6 @@ $id = $_GET['id'];
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $data = [
         "id" => $id,
-        "name" => $_POST['name'],
-        'age' => $_POST['age'],
-        'email' => $_POST['email'],
         'course_name' => $_POST['course_name'],
         'course_id' => $_POST['course_id']
     ];
@@ -33,9 +30,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 ?>
 <h2>Add Student</h2>
 <form method="post">
-    <label>Name: <input type="text" name="name" required></label><br>
-    <label>Age: <input type="number" name="age" required min="1"></label><br>
-    <label>Email: <input type="email" name="email" required></label><br>
     <label>Course ID: <input type="number" name="course_id" required min="1"></label><br>
     <label>Course Name: <input type="text" name="course_name" required></label><br>
     <button type="submit">Add</button>

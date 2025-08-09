@@ -31,6 +31,9 @@
     <label>Userid: <input type="text" name="userid"></label><br>
     <label>Password: <input type="password" name="password"></label><br>
     <button type="submit">Login</button>
+    <section>
+        <a href="signUp.php">Sign Up</a>
+    </section>
 </form>
 </body>
 </html>
