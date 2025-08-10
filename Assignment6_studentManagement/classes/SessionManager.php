@@ -15,7 +15,7 @@
         }
 
         public static function isLoggedIn(){
-            return (isset($_SESSION['logged-in']) && $_SESSION['logged-in']==true);
+            return (isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true);
         }
 
         public static function login(){
