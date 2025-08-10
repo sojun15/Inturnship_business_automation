@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     $student = new Student();
     $student -> addStudent($data);
-    header('Location: viewStudent.php');
+    header('Location: viewStudent.php?id'. urldecode($_SESSION['user_id']));
     exit();
 }
 ?>

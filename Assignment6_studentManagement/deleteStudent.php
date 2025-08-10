@@ -15,7 +15,7 @@
 
     $student = new Student();
     $student-> delete($id);
-    header('Location: viewStudent.php');
+    header('Location: viewStudent.php?id' . urldecode($_SESSION['user_id']));
     exit();
     ?>
 </body>

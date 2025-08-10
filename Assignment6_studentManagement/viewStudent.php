@@ -11,8 +11,13 @@ require_once 'classes/SessionManager.php';
 require_once 'classes/Student.php';
 SessionManager::requireLogin();
 
+$id = $_SESSION['user_id'];
+
 $students = new Student();
 $students = $students->getAll();
+$students = array_filter($students,function($student) use($id){
+    return $student['id'] === $id;
+});
 ?>
 <h1>student info</h1>
 <table border="1">

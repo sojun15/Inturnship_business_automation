@@ -11,7 +11,6 @@
 require_once 'classes/SessionManager.php';
 require_once 'classes/Student.php';
 
-SessionManager:: requireLogin();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $data = [

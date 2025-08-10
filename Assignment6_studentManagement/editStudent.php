@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'course_name' => $_POST['course_name']
     ];
     $student->update($id, $data);
-    header('Location: viewStudent.php');
+    header('Location: viewStudent.php?id'. urldecode($_SESSION['user_id']));
     exit();
 }
 ?>
