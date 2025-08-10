@@ -23,7 +23,7 @@
         <a href="addStudent.php?id=<?php echo urldecode($_SESSION['user_id']); ?>">Add Student</a><br>
         <a href="viewStudent.php">View Students</a><br>
         <a href="editStudent.php?id=<?php echo urlencode($_SESSION['user_id']); ?>">Edit info</a><br>
-        <a href="deleteStudent.php">Delete Students</a><br>
+        <a href="deleteStudent.php?id=<?php echo urldecode($_SESSION['user_id']); ?>">Delete Students</a><br>
         <a href="logout.php">Logout</a>
     </section>
 </section>

@@ -42,7 +42,6 @@
         }
 
         public function update($id, $newData) {
-            echo $newData;
             $students = $this->getAll();
             foreach ($students as &$student) {
                 if ($student['id'] == $id) {
@@ -51,6 +50,14 @@
                 }
             }
             file_put_contents($this->studentsFile, json_encode($students, JSON_PRETTY_PRINT));
+        }
+
+        public function delete($id){
+            $students = $this -> getAll();
+            $students = array_filter($students,function($student) use($id){
+                return $student['id'] != $id;
+            });
+            file_put_contents($this->studentsFile,json_encode(array_values($students),JSON_PRETTY_PRINT));
         }
     }
     ?>
