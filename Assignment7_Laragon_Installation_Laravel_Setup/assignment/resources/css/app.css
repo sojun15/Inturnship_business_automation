@@ -1,0 +1,11 @@
+.hero {
+    background-image: url('/river.png'); /* image in public/ folder */
+    background-size: cover; /* cover whole div */
+    background-position: center; /* center image */
+    height: 400px; /* or 100vh for full screen */
+    display: flex; /* to center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* make text visible on dark bg */
+}
