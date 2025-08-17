@@ -8,15 +8,9 @@ class AuthController extends Controller
     public function login(Request $request){
         $userid = $request -> input('userid');
         $password = $request -> input('password');
+        $userName = $request -> input('userName');
 
-        // return "user id".$userid." password:".$password;
-        echo "user id:". $userid . " password:". $password;
-    }
-
-    public function element_method(){
-        $name = 'sojun';
-        $student = ['sojun',15,'cse'];
-        return view('condition_loop',['name'=> $name, 'student' => $student]);
+        return view('homePage',['userName'=>$userName]);
     }
 }
 ?>
