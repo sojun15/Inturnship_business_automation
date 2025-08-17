@@ -15,23 +15,23 @@
     <section class="space-y-2">
         <label class="block text-sm font-medium text-gray-700">User ID:</label>
         <input type="text" name="userid" placeholder="UserId"
-               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
     </section>
 
     <section class="space-y-2">
         <label class="block text-sm font-medium text-gray-700">User Name:</label>
         <input type="text" name="userName" placeholder="UserName"
-               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
     </section>
 
     <section class="space-y-2">
         <label class="block text-sm font-medium text-gray-700">Password</label>
         <input type="password" name="password" placeholder="Password"
-               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
     </section>
 
     <button type="submit"
-            class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+        class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
         Login
     </button>
 </form>
