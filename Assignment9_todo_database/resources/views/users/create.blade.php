@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100 h-screen flex flex-col justify-center items-center">
     <section class="w-60 flex flex-col justify-center items-center bg-white p-4 rounded-lg shadow">
-        <h1 class="text-lg font-bold mb-3">SignUp Student</h1>
+        <h1 class="text-lg font-bold mb-3">Task creation form</h1>
 
         @if($errors->any())
         <div class="mb-3">
@@ -24,13 +24,13 @@
         {!! Form::open(['route' => 'users.store', 'method' => 'post', 'class' => 'space-y-2 h-auto w-full']) !!}
 
             <div>
-                {!! Form::label('title', 'Task title', ['class' => 'block']) !!}
+                {!! Form::label('title', 'Task Title', ['class' => 'block']) !!}
                 {!! Form::text('title', null, ['required', 'class' => 'w-full p-2 border border-black rounded-lg']) !!}
             </div>
 
             <div>
-                {!! Form::label('description', 'Task description', ['class' => 'block']) !!}
-                {!! Form::text('description', null, ['required', 'class' => 'w-full p-2 border border-black rounded-lg']) !!}
+                {!! Form::label('Description', 'Task description', ['class' => 'block']) !!}
+                {!! Form::textarea('description', null, ['required', 'class' => 'w-full  border border-black rounded-lg']) !!}
             </div>
 
             {!! Form::submit('Submit', ['class' => 'bg-blue-400 text-white p-2 w-full rounded-lg']) !!}
