@@ -29,9 +29,14 @@
                 <td class="border border-black px-4 py-2">{{$student->description}}</td>
                 <td class="border border-black px-4 py-2">{{$student->created_at}}</td>
                 <td class="border border-black px-4 py-2">
-                    <button class="px-2 bg-green-400 border rounded-lg">Edit</button>
-                    <button class="px-2 bg-red-400 border rounded-lg">Delete</button>
-                </td>
+                <a href="{{ route('users.edit', $student->id) }}" class="px-2 bg-green-400 border rounded-lg">Edit</a>
+                <form action="{{ route('users.destroy', $student->id) }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="px-2 bg-red-400 border rounded-lg">Delete</button>
+                </form>
+            </td>
+
             </tr>
             @endforeach
             </tbody>
