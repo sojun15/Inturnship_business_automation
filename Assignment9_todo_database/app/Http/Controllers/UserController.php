@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -63,5 +64,16 @@ class UserController extends Controller
     // this function render the create.blade.php into view
     public function create(){
         return view('users.create');
+    }
+
+    public function loginUser(Request $request){
+        $data = $request->validate([
+            'userid' => 'required',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt($data)){
+            return view('users.index');
+        }
     }
 }

@@ -20,7 +20,6 @@
         </div>
         @endif
 
-        {{-- Open Form --}}
         {!! Form::open(['route' => 'users.store', 'method' => 'post', 'class' => 'space-y-2 h-auto w-full']) !!}
 
             <div>
